@@ -1,10 +1,8 @@
 import React from "react";
-import { Menu } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
-export default () => (
-  <Menu fixed="top">
-    <Menu.Item header>
-      <h1>AARC</h1>
-    </Menu.Item>
-  </Menu>
-);
+import MenuHeader from "./MenuHeader";
+
+const logo = <Link to="/">AARC</Link>;
+
+export default () => <MenuHeader left={logo} />;

@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 
-export default () => (
-  <Menu fixed="top" inverted>
-    <Link to="/">
-      <Menu.Item>Back</Menu.Item>
-    </Link>
-  </Menu>
+import MenuHeader from "./MenuHeader";
+
+const back = (
+  <Link to="/">
+    <Icon inverted color="grey" name="arrow left" />
+    Back
+  </Link>
 );
+
+export default () => <MenuHeader inverted={true} left={back} />;
