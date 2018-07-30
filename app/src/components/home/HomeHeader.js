@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MenuHeader from "./MenuHeader";
+import MenuHeader from "../menu/MenuHeader";
 
 const logo = <Link to="/">AARC</Link>;
 

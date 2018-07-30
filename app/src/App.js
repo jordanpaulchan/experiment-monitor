@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Loader } from "./components/Loader";
 
-import HomeHeader from "./components/HomeHeader";
-import CaseHeader from "./components/CaseHeader";
+import HomeHeader from "./components/home/HomeHeader";
+import CaseHeader from "./components/case/CaseHeader";
 
-const Home = Loader("./Home");
-const Case = Loader("./Case");
-const NotFound = Loader("./NotFound");
+const Home = Loader("./home/Home");
+const Case = Loader("./case/Case");
+const NotFound = Loader("./error/NotFound");
 
 class App extends Component {
   render() {

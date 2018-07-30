@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
 
-import MenuHeader from "./MenuHeader";
+import MenuHeader from "../menu/MenuHeader";
 
 const back = (
   <Link to="/">
