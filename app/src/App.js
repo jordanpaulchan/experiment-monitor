@@ -21,7 +21,7 @@ class App extends Component {
               <Route path="/case" component={CaseHeader} />
             </Switch>
           </header>
-          <main style={{ marginTop: "7em" }}>
+          <main>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/case" component={Case} />
