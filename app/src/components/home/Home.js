@@ -1,9 +1,17 @@
 import React from "react";
-import { Container, Segment } from "semantic-ui-react";
+import { List } from "immutable";
+import { Container } from "semantic-ui-react";
 
+import CaseList from "../case/CaseList";
 import CreateCaseButton from "../case/CreateCaseButton";
 
 import "./Home.css";
+
+const NUM_CASES = 10;
+const CASE_DATA = new List(new Array(NUM_CASES)).map((items, idx) => ({
+  id: idx,
+  name: `Case ${idx}`
+}));
 
 export default () => {
   return (
@@ -13,12 +21,7 @@ export default () => {
           <CreateCaseButton />
         </section>
         <section className="Content">
-          <Segment.Group>
-            <Segment>Case 1</Segment>
-            <Segment>Case 2</Segment>
-            <Segment>Case 3</Segment>
-            <Segment>Case 4</Segment>
-          </Segment.Group>
+          <CaseList cases={CASE_DATA} />
         </section>
       </Container>
     </main>

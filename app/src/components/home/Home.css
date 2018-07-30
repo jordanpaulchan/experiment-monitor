@@ -1,7 +1,12 @@
 .Home {
   margin-top: 7em;
+  margin-bottom: 3em;
 }
 
 .Create {
   margin-bottom: 1em;
+}
+
+.Content {
+  margin-top: 1em;
 }
