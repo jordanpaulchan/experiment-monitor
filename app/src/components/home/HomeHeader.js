@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import MenuHeader from "../menu/MenuHeader";
+import Logo from "../logo/Logo";
+import Profile from "../profile/Profile";
 
-const logo = <Link to="/">AARC</Link>;
+import "./HomeHeader.css";
 
-export default () => <MenuHeader left={logo} />;
+export default () => (
+  <MenuHeader className="HomeHeader" left={Logo} right={Profile} />
+);

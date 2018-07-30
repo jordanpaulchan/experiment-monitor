@@ -7,7 +7,7 @@ import CreateCaseButton from "../case/CreateCaseButton";
 
 import "./Home.css";
 
-const NUM_CASES = 10;
+const NUM_CASES = 30;
 const CASE_DATA = new List(new Array(NUM_CASES)).map((items, idx) => ({
   id: idx,
   name: `Case ${idx}`

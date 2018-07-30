@@ -1,9 +1,11 @@
 import React from "react";
-import { Menu } from "semantic-ui-react";
+import { Container, Menu } from "semantic-ui-react";
 
-export default ({ inverted, left, right }) => (
-  <Menu fixed="top" inverted={inverted} size="massive">
-    <Menu.Item header>{left}</Menu.Item>
-    {right && <Menu.Item>{right}</Menu.Item>}
+export default ({ className, inverted, left, right }) => (
+  <Menu className={className} fixed="top" inverted={inverted} size="massive">
+    <Container fluid>
+      {left && <Menu.Item header>{left}</Menu.Item>}
+      {right && <Menu.Item position="right">{right}</Menu.Item>}
+    </Container>
   </Menu>
 );
