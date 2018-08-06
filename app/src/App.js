@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { PureComponent, Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Loader } from "./components/Loader";
@@ -9,9 +9,10 @@ import CaseAside from "./components/case/CaseAside";
 
 const Home = Loader("./home/Home");
 const Case = Loader("./case/Case");
+const CasePatient = Loader("./case/CasePatient");
 const NotFound = Loader("./error/NotFound");
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <Router>
@@ -31,10 +32,10 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/case" component={Case} />
-              <Route exact path="/case/patient" component={Case} />
-              <Route exact path="/case/setup" component={Case} />
-              <Route exact path="/case/equipment" component={Case} />
-              <Route exact path="/case/data" component={Case} />
+              <Route exact path="/case/patient" component={CasePatient} />
+              <Route exact path="/case/setup" component={CasePatient} />
+              <Route exact path="/case/equipment" component={CasePatient} />
+              <Route exact path="/case/data" component={CasePatient} />
               <Route component={NotFound} />
             </Switch>
           </main>
