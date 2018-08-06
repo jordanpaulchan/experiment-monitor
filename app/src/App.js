@@ -5,6 +5,7 @@ import { Loader } from "./components/Loader";
 
 import HomeHeader from "./components/home/HomeHeader";
 import CaseHeader from "./components/case/CaseHeader";
+import CaseAside from "./components/case/CaseAside";
 
 const Home = Loader("./home/Home");
 const Case = Loader("./case/Case");
@@ -21,10 +22,19 @@ class App extends Component {
               <Route path="/case" component={CaseHeader} />
             </Switch>
           </header>
+          <aside>
+            <Switch>
+              <Route path="/case" component={CaseAside} />
+            </Switch>
+          </aside>
           <main>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/case" component={Case} />
+              <Route exact path="/case/patient" component={Case} />
+              <Route exact path="/case/setup" component={Case} />
+              <Route exact path="/case/equipment" component={Case} />
+              <Route exact path="/case/data" component={Case} />
               <Route component={NotFound} />
             </Switch>
           </main>

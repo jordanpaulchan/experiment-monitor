@@ -1,0 +1,27 @@
+.CaseAside {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  height: 100%;
+  width: 20rem;
+  border-right: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.CaseItem {
+  padding: 1rem;
+  min-height: 8rem;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.CaseItemTitle {
+  font-weight: 750;
+  padding-bottom: 0.75rem;
+}
+
+.CaseItemDescription {
+  color: grey;
+}

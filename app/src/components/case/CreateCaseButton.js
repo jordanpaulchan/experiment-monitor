@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
 
 export default () => (
-  <Link to="/case">
+  <Link to="/case/patient">
     <Button primary size="large">
       <Button.Content>Log Case</Button.Content>
     </Button>
