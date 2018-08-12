@@ -9,7 +9,7 @@ import CaseAside from "./components/case/CaseAside";
 
 const Home = Loader("./home/Home");
 const Case = Loader("./case/Case");
-const CasePatient = Loader("./case/CasePatient");
+const CasePatientContainer = Loader("./case/CasePatientContainer");
 const NotFound = Loader("./error/NotFound");
 
 class App extends PureComponent {
@@ -32,10 +32,22 @@ class App extends PureComponent {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/case" component={Case} />
-              <Route exact path="/case/patient" component={CasePatient} />
-              <Route exact path="/case/setup" component={CasePatient} />
-              <Route exact path="/case/equipment" component={CasePatient} />
-              <Route exact path="/case/data" component={CasePatient} />
+              <Route
+                exact
+                path="/case/patient"
+                component={CasePatientContainer}
+              />
+              <Route
+                exact
+                path="/case/setup"
+                component={CasePatientContainer}
+              />
+              <Route
+                exact
+                path="/case/equipment"
+                component={CasePatientContainer}
+              />
+              <Route exact path="/case/data" component={CasePatientContainer} />
               <Route component={NotFound} />
             </Switch>
           </main>

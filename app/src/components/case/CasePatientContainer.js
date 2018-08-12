@@ -1,8 +1,5 @@
 import React, { PureComponent } from "react";
-import CasePatientSection from "./CasePatientSection";
-import CaseNextPageButton from "./CaseNextPageButton";
-
-import "./CasePatient.css";
+import CasePage from "./CasePage";
 
 const sections = [
   {
@@ -49,21 +46,10 @@ const sections = [
   }
 ];
 
-class CasePatient extends PureComponent {
+class CasePatientContainer extends PureComponent {
   render() {
-    const patientSections = sections.map(section => (
-      <CasePatientSection key={section.key} section={section} />
-    ));
-
-    return (
-      <div className="CasePatient">
-        {patientSections}
-        <div className="CasePatientButton">
-          <CaseNextPageButton to="/case/setup" />
-        </div>
-      </div>
-    );
+    return <CasePage sections={sections} next="/case/setup" />;
   }
 }
 
-export default CasePatient;
+export default CasePatientContainer;
