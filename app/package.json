@@ -25,6 +25,7 @@
     "build": "npm run build-semantic && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 --profile default sync build/ s3://aarc-app-staging --delete"
+    "deploy": "npm run build && aws s3 --profile default sync build/ s3://aarc-app-staging --delete",
+    "post-deploy": "aws cloudfront --profile default create-invalidation --distribution-id E19MMBFC4QBJCW --paths '/*'"
   }
 }
