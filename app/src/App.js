@@ -11,6 +11,8 @@ const Home = Loader("./home/Home");
 const Case = Loader("./case/Case");
 const CasePatientContainer = Loader("./case/CasePatientContainer");
 const CaseDataContainer = Loader("./case/CaseDataContainer");
+const CaseSetupContainer = Loader("./case/CaseSetupContainer");
+const CaseEquipmentContainer = Loader("./case/CaseEquipmentContainer");
 const NotFound = Loader("./error/NotFound");
 
 class App extends PureComponent {
@@ -38,15 +40,11 @@ class App extends PureComponent {
                 path="/case/patient"
                 component={CasePatientContainer}
               />
-              <Route
-                exact
-                path="/case/setup"
-                component={CasePatientContainer}
-              />
+              <Route exact path="/case/setup" component={CaseSetupContainer} />
               <Route
                 exact
                 path="/case/equipment"
-                component={CasePatientContainer}
+                component={CaseEquipmentContainer}
               />
               <Route exact path="/case/data" component={CaseDataContainer} />
               <Route component={NotFound} />

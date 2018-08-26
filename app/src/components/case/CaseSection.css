@@ -18,14 +18,17 @@
 .CaseSectionLabel {
   flex: 1;
   display: flex;
-  flex-direction: column;
   margin-bottom: 1rem;
+}
+
+.CaseSectionLabel--input {
+  flex-direction: column;
 }
 
 .CaseSectionLabel:last-child {
   margin-bottom: 0;
 }
 
-.CaseSectionTitle {
+.CaseSectionLabel__Title--input {
   margin-bottom: 0.5rem;
 }

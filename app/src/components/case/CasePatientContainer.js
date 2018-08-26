@@ -25,21 +25,41 @@ const sections = [
         key: "phone",
         title: "Phone",
         type: "text"
+      },
+      {
+        key: "weight",
+        title: "Weight",
+        type: "number"
+      },
+      {
+        key: "age",
+        title: "Age",
+        type: "number"
       }
     ]
   },
   {
-    key: "doctor",
-    title: "Doctor Information",
+    key: "doctors",
+    title: "Doctors Information",
     inputs: [
       {
-        key: "firstName",
-        title: "First Name",
+        key: "anesthetist",
+        title: "Anesthetist",
         type: "text"
       },
       {
-        key: "lastName",
-        title: "Last Name",
+        key: "dentist",
+        title: "Dentist",
+        type: "text"
+      },
+      {
+        key: "assistant",
+        title: "Assistant",
+        type: "text"
+      },
+      {
+        key: "nurse",
+        title: "Nurse",
         type: "text"
       }
     ]
